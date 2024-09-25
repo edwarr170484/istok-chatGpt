@@ -39,6 +39,6 @@ class ValidateToken
             }
         }
 
-        return response()->json(["Не авторизован"], 401);
+        return response()->json(['success' => null, 'errors' => 'Не авторизован'], 401);
     }
 }
