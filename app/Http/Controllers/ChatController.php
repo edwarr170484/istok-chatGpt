@@ -33,16 +33,16 @@ class ChatController extends Controller
             ];
 
             try{
-                /*$result = OpenAI::chat()->create([
+                $result = OpenAI::chat()->create([
                     'model' => 'gpt-3.5-turbo-instruct',
                     'messages' => $messages,
                 ]);
 
                 $result = Arr::get($result, 'choices.0.message')['content'] ?? '';
 
-                return response()->json(['success' => ['answer' => $result]], 200);*/
+                return response()->json(['success' => ['answer' => $result]], 200);
 
-                $response = Http::withOptions([
+                /*$response = Http::withOptions([
                     'proxy' => 'http://167.99.124.118:8080'
                 ])->withHeaders([
                     'Content-Type' => 'application/json',
@@ -53,7 +53,7 @@ class ChatController extends Controller
                     'max_tokens' => 150,
                     'temperature' => 0.7,
                     'stop' => ['\n'],
-                ]);
+                ]);*/
 
                 return response()->json(['success' => ['answer' => $response]], 200); 
 

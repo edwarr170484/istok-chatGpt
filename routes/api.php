@@ -19,7 +19,7 @@ Route::controller(AuthController::class)->prefix('user')->group(function(){
 
 Route::controller(ChatController::class)->group(function(){
     Route::get("/questions", "questions")->middleware(ValidateToken::class);
-    Route::get("/chat", "chat")->middleware(ValidateToken::class);
+    Route::post("/chat", "chat")->middleware(ValidateToken::class);
 });
 
 
